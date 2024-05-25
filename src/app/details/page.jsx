@@ -97,7 +97,7 @@ function Page() {
         <div className={style.twoNav}>
           <div className={style.left}>
             <div className={style.imageBox}>
-              <img
+              <Image
                 alt={"image"}
                 src={"/images/blank-profile-picture-973460_960_720.webp"}
                 width={20}
