@@ -40,7 +40,7 @@ function Navbar() {
             fill="none"
             class="fill-current"
           >
-            <title>Dribbble: the community for graphic design</title>
+            <title>{"Dribbble: the community for graphic design"}</title>
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -107,9 +107,9 @@ function Navbar() {
       </nav>
       <div className={style.hero}>
         <div className={style.intro}>
-          Over 3 million ready-to-work creatives
+          {"Over 3 million ready-to-work creatives"}
         </div>
-        <h1>The world's destination for deign</h1>
+        <h1>{"The world's destination for deign"}</h1>
         <p>
           Get inspired by the work of millions of top rated-designers & agencies
           around the world

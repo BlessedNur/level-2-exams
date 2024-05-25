@@ -55,7 +55,6 @@ function Products() {
           >
             <div className={`${style.imageBox} boxes`}>
               <Image
-                alt={"image"}
                 src={product["product-image"]}
                 width={300}
                 height={300}
