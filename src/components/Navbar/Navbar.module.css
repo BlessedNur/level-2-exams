@@ -134,7 +134,7 @@
   gap: 3em;
   width: 100em;
   /* transform: translateX(4em); */
-  animation: mover 200s infinite ease-in-out alternate ;
+  animation: mover 200s infinite linear alternate ;
 }
 @keyframes mover {
   from {
