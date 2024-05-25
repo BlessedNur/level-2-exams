@@ -85,7 +85,12 @@ function Navbar() {
               onClick={() => navigate.push("/dashboard")}
               // onClick={() => signOut()}
             >
-              <Image src={session.user.image} width={100} height={100} />
+              <Image
+                alt={"image"}
+                src={session.user.image}
+                width={100}
+                height={100}
+              />
             </div>
           ) : (
             <div className={style.buttons}>
@@ -116,6 +121,7 @@ function Navbar() {
           {products.map((item) => (
             <div className={style.imageBox}>
               <Image
+                alt={"image"}
                 src={item["product-image"]}
                 width={500}
                 height={500}

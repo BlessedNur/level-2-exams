@@ -7,7 +7,7 @@ import React, { useContext } from "react";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 
-function page() {
+function Page() {
   const [selected, setSelected] = useContext(productContext);
   const navigate = useRouter();
   const { data: session } = useSession();
@@ -71,7 +71,12 @@ function page() {
               style={{ cursor: "pointer" }}
               onClick={() => navigate.push("/dashboard")}
             >
-              <Image src={session.user.image} width={100} height={100} />
+              <Image
+                alt={"image"}
+                src={session.user.image}
+                width={100}
+                height={100}
+              />
             </div>
           ) : (
             <div className={style.buttons}>
@@ -93,6 +98,7 @@ function page() {
           <div className={style.left}>
             <div className={style.imageBox}>
               <Image
+                alt={"image"}
                 src={"/images/blank-profile-picture-973460_960_720.webp"}
                 width={20}
                 height={20}
@@ -112,7 +118,12 @@ function page() {
         </div>
       </div>
       <div className={style.previewImage}>
-        <Image src={selected["product-image"]} width={1000} height={1000} />
+        <Image
+          alt={"image"}
+          src={selected["product-image"]}
+          width={1000}
+          height={1000}
+        />
         <div className="rightP">
           <h1>Description</h1>
           <p>{selected.description}</p>
@@ -122,7 +133,4 @@ function page() {
   );
 }
 
-
-
-
-export default page;
+export default Page;

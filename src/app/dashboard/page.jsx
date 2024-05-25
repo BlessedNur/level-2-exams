@@ -69,7 +69,7 @@ function Page() {
               style={{ cursor: "pointer" }}
               onClick={() => navigate.push("/dashboard")}
             >
-              <Image src={session.user.image} width={100} height={100} />
+              <Image alt={"image"} src={session.user.image} width={100} height={100} />
             </div>
           ) : (
             <div className={style.buttons}>
@@ -86,7 +86,7 @@ function Page() {
       </nav>
       <div className={style.details}>
         <div className={style.leftDe}>
-          <Image
+          <Image alt={"image"}
             src={
               session
                 ? session.user.image

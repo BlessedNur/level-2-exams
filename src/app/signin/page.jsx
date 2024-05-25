@@ -81,7 +81,7 @@ function Page() {
             margin: "0 auto",
           }}
         >
-          Don't have an account ? <Link href={""}>Sign up</Link>
+          {"Don't have an account ?"} <Link href={""}>Sign up</Link>
         </div>
       </div>
     </section>

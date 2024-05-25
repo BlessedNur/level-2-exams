@@ -55,6 +55,7 @@ function Products() {
           >
             <div className={`${style.imageBox} boxes`}>
               <Image
+                alt={"image"}
                 src={product["product-image"]}
                 width={300}
                 height={300}
@@ -77,6 +78,7 @@ function Products() {
               <div className={style.leftD}>
                 <div className={style.profileImageBox}>
                   <Image
+                    alt={"image"}
                     src={"/images/blank-profile-picture-973460_960_720.webp"}
                     width={10}
                     height={10}
