@@ -53,6 +53,7 @@ function Products() {
             }}
             key={product._id}
           >
+            
             <div className={`${style.imageBox} boxes`}>
               <Image
                 src={product["product-image"]}
