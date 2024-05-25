@@ -56,6 +56,8 @@ function Page() {
         ></video>
         <div className={style.logo}>
           <svg
+            onClick={() => navigate.push("/")}
+            style={{ cursor: "pointer" }}
             xmlns="http://www.w3.org/2000/svg"
             width="76"
             height="30"
@@ -80,7 +82,7 @@ function Page() {
         <button
           onClick={() => {
             setIsLoading(true);
-            signIn();
+            signIn("google");
           }}
         >
           <svg
