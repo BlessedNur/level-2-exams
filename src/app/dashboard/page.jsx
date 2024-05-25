@@ -109,7 +109,6 @@ function Page() {
             <button
               onClick={() => {
                 signOut();
-                navigate.push("/");
               }}
             >
               Sign out
