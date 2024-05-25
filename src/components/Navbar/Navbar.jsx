@@ -118,8 +118,8 @@ function Navbar() {
       </div>
       <div className={style.carousel}>
         <div className={style.carouselBox}>
-          {products.map((item) => (
-            <div className={style.imageBox}>
+          {products.map((item,index) => (
+            <div className={style.imageBox} key={index}>
               <Image
                 alt={"image"}
                 src={item["product-image"]}
