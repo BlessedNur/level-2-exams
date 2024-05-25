@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./page.module.css";
 import Link from "next/link";
 import { signIn, useSession } from "next-auth/react";
@@ -9,11 +9,13 @@ function Page() {
   const { data: session } = useSession();
   const [isLoading, setIsLoading] = useState(false);
 
-  if (session) {
-    setIsLoading(false);
-    navigate.push("/");
-  }
-  // console.log(session.user.name);
+  useEffect(() => {
+    if (session) {
+      setIsLoading(false);
+      navigate.push("/");
+    }
+  }, [session]);
+  console.log(session);
   const handleSubmit = (e) => {
     e.preventDefault();
   };
