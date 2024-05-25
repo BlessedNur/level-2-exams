@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import style from "./page.module.css";
 import Link from "next/link";
 import { signIn, useSession } from "next-auth/react";
@@ -7,8 +7,10 @@ import { useRouter } from "next/navigation";
 function Page() {
   const navigate = useRouter();
   const { data: session } = useSession();
+  const [isLoading, setIsLoading] = useState(false);
 
   if (session) {
+    setIsLoading(false);
     navigate.push("/");
   }
   // console.log(session.user.name);
@@ -17,6 +19,32 @@ function Page() {
   };
   return (
     <section className={style.login}>
+      {isLoading && (
+        <div className="loading">
+          <div
+            aria-label="Orange and tan hamster running in a metal wheel"
+            role="img"
+            className="wheel-and-hamster"
+          >
+            <div className="wheel"></div>
+            <div className="hamster">
+              <div className="hamster__body">
+                <div className="hamster__head">
+                  <div className="hamster__ear"></div>
+                  <div className="hamster__eye"></div>
+                  <div className="hamster__nose"></div>
+                </div>
+                <div className="hamster__limb hamster__limb--fr"></div>
+                <div className="hamster__limb hamster__limb--fl"></div>
+                <div className="hamster__limb hamster__limb--br"></div>
+                <div className="hamster__limb hamster__limb--bl"></div>
+                <div className="hamster__tail"></div>
+              </div>
+            </div>
+            <div className="spoke"></div>
+          </div>
+        </div>
+      )}
       <div className={style.lefts}>
         <video
           autoPlay
@@ -45,9 +73,14 @@ function Page() {
         <div className={style.email}>@glebich</div>
       </div>
       <div className={style.rights}>
-        <h1>SIgn in to Dribble</h1>
+        <h1>Sign in to Dribble</h1>
         {/* <form onSubmit={handleSubmit}> */}
-        <button onClick={() => signIn()}>
+        <button
+          onClick={() => {
+            setIsLoading(true);
+            signIn();
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={"24"}
