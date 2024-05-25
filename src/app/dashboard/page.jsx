@@ -3,7 +3,7 @@ import React from "react";
 import style from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 function Page() {
@@ -17,7 +17,7 @@ function Page() {
             style={{
               cursor: "pointer",
             }}
-            onClick={()=>navigate.push("/")}
+            onClick={() => navigate.push("/")}
             xmlns="http://www.w3.org/2000/svg"
             width="76"
             height="30"
@@ -69,7 +69,12 @@ function Page() {
               style={{ cursor: "pointer" }}
               onClick={() => navigate.push("/dashboard")}
             >
-              <img alt={"image"} src={session.user.image} width={100} height={100} />
+              <img
+                alt={"image"}
+                src={session.user.image}
+                width={100}
+                height={100}
+              />
             </div>
           ) : (
             <div className={style.buttons}>
@@ -86,7 +91,8 @@ function Page() {
       </nav>
       <div className={style.details}>
         <div className={style.leftDe}>
-          <img alt={"image"}
+          <img
+            alt={"image"}
             src={
               session
                 ? session.user.image
@@ -100,7 +106,14 @@ function Page() {
           <h1>{session ? session.user.name : " Unknown"}</h1>
           <div className={style.buttons}>
             <button>Edit Profile</button>
-            <button>...</button>
+            <button
+              onClick={() => {
+                signOut();
+                navigate.push("/");
+              }}
+            >
+              Sign out
+            </button>
           </div>
         </div>
       </div>
