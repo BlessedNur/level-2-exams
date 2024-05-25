@@ -1,0 +1,55 @@
+.login {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 8em;
+}
+.rights{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  /* align-items: center; */
+}
+.lefts video {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+.lefts {
+  position: relative;
+  width: 30%;
+  /* background-color: red; */
+  height: 100%;
+}
+
+.logo{
+  position: absolute;
+  top: 8%;
+  left: 8%;
+}
+.logo svg path{
+  fill: white;
+}
+.email{
+  position: absolute;
+  bottom: 8%;
+  left: 8%;
+  color: white;
+}
+.rights h1{
+ font-size: 30px;
+ font-weight: 600;
+}
+.rights button{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  /* width: 40em; */
+
+  padding: 1em 9em;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}

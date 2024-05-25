@@ -1,0 +1,173 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+.left ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5em;
+  align-items: center;
+}
+.left ul li {
+  cursor: pointer;
+}
+.left ul li a {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  color: #0d0c22;
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  position: relative;
+  background-color: #f8f8f8;
+  /* padding: .5em; */
+  overflow: hidden;
+  border-radius: 30px;
+}
+.searchBox i {
+  position: absolute;
+  left: 5%;
+  /* font-size: ; */
+}
+.searchBox input {
+  border: none;
+  background-color: transparent;
+  padding: 1em 2em;
+  padding-left: 2.5em;
+  outline: none;
+}
+.buttons {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.buttons button {
+  padding: 1em 1.5em;
+  border: none;
+  cursor: pointer;
+}
+.buttons button:last-child {
+  background-color: black;
+  color: white;
+  border-radius: 40px;
+}
+.buttons button:first-child {
+  background-color: transparent;
+  color: black;
+  /* border-radius: 20px; */
+}
+
+.buttons a {
+  text-decoration: none;
+  color: inherit;
+}
+.hero {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  margin-top: 4em;
+}
+
+.fav,
+.liking {
+  background-color: white;
+  color: black;
+  /* padding: 1em; */
+  width: 2.5em;
+  height: 2.5em;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.fav:hover,
+.liking:hover {
+  scale: 1.05;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image {
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  overflow: hidden;
+}
+.left {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.twoNav {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 1em; */
+}
+.rightD {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.rightD button {
+  padding: 1em 1.5em;
+  border: none;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border-radius: 40px;
+}
+.detail {
+  height: 100vh;
+  width: 100%;
+  background: white !important;
+}
+.detaily{
+  padding: 1em;
+}
+.imageBox img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.left{
+  /* overflow: hidden; */
+}
+.left p{
+  white-space: nowrap;
+}
+.previewImage{
+  width: 100%;
+  display: flex;
+  padding: 2em;
+  gap: 2em;
+  margin: 0 auto;
+  /* background-color: red; */
+  height: 80vh;
+}
+.previewImage img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
