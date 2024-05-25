@@ -85,7 +85,7 @@ function Navbar() {
               onClick={() => navigate.push("/dashboard")}
               // onClick={() => signOut()}
             >
-              <Image
+              <img
                 alt={"image"}
                 src={session.user.image}
                 width={100}
@@ -118,7 +118,7 @@ function Navbar() {
       </div>
       <div className={style.carousel}>
         <div className={style.carouselBox}>
-          {products.map((item,index) => (
+          {products.map((item, index) => (
             <div className={style.imageBox} key={index}>
               <img
                 alt={"image"}

@@ -71,7 +71,7 @@ function Page() {
               style={{ cursor: "pointer" }}
               onClick={() => navigate.push("/dashboard")}
             >
-              <Image
+              <img
                 alt={"image"}
                 src={session.user.image}
                 width={100}
@@ -97,7 +97,7 @@ function Page() {
         <div className={style.twoNav}>
           <div className={style.left}>
             <div className={style.imageBox}>
-              <Image
+              <img
                 alt={"image"}
                 src={"/images/blank-profile-picture-973460_960_720.webp"}
                 width={20}
@@ -118,7 +118,7 @@ function Page() {
         </div>
       </div>
       <div className={style.previewImage}>
-        <Image
+        <img
           alt={"image"}
           src={selected["product-image"]}
           width={1000}
