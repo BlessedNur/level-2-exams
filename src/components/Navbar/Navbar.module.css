@@ -141,7 +141,7 @@
     transform: translateX(0);
   }
   to{
-    transform: translateX(-280%);
+    transform: translateX(-265%);
   }
 }
 .carousel::-webkit-scrollbar {
@@ -150,7 +150,7 @@
 .carousel {
   width: 100%;
   padding: 1em;
-  overflow: scroll;
+  overflow: hidden;
 }
 .carouselImage {
   width: 100%;
