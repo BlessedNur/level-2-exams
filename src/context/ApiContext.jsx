@@ -14,7 +14,8 @@ function ApiContext({ children }) {
   });
   // console.log(selected);
 
-  useEffect(() => {
+  useEffect
+    (() => {
     if (typeof window !== "undefined") {
       localStorage.setItem("movie", JSON.stringify(selected));
     }

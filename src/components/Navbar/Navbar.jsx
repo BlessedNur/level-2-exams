@@ -116,21 +116,21 @@ function Navbar() {
         </p>
         <button>Get started</button>
       </div>
-      <div className={style.carousel}>
-        <div className={style.carouselBox}>
-          {products.map((item, index) => (
-            <div className={style.imageBox} key={index}>
-              <img
-                alt={"image"}
-                src={item["product-image"]}
-                width={500}
-                height={500}
-                className={style.carouselImage}
-              />
-            </div>
-          ))}
-        </div>
+      {/* <div className={style.carousel}> */}
+      <div className={style.wrapper}>
+        {products.map((item, index) => (
+          <div className={`${style.item} ${style["item" + index]}`} key={index}>
+            <img
+              alt={"image"}
+              src={item["product-image"]}
+              width={500}
+              height={500}
+              className={style.carouselImage}
+            />
+          </div>
+        ))}
       </div>
+      {/* </div> */}
     </>
   );
 }
