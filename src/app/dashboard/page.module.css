@@ -234,6 +234,6 @@
     white-space: nowrap;
   }
 }
-.cats::-webkit-scrollbar {
+.cats ul::-webkit-scrollbar {
   display: none;
 }

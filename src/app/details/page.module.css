@@ -212,4 +212,7 @@
     flex-direction: column;
     padding: 1em;
   }
+  .rightD button {
+    font-size: 11px;
+  }
 }
