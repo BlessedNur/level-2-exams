@@ -224,6 +224,9 @@
   .buttons button {
     white-space: nowrap;
   }
+  .buttons {
+    flex-direction: column;
+  }
   .cats ul {
     overflow: scroll;
   }
