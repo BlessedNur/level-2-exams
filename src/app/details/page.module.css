@@ -213,6 +213,7 @@
     padding: 1em;
   }
   .rightD button {
-    font-size: 11px;
+    font-size: 10px;
+    white-space: nowrap;
   }
 }
