@@ -115,7 +115,7 @@ function Page() {
               </button>
               <button className={style.button2}>
                 {" "}
-                <Link href={"/signup"}>Sign up</Link>
+                <Link href={"/signin"}>Sign up</Link>
               </button>
             </div>
           )}
