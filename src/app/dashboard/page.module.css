@@ -172,15 +172,65 @@
   gap: 1em;
   padding: 1em;
   align-items: center;
-  border-bottom:  2px solid #f8f8f8;
+  border-bottom: 2px solid #f8f8f8;
   width: 95%;
   margin: 0 auto;
 }
-.active{
+.active {
   background-color: #f8f8f8;
   border-radius: 30px;
 }
 .cats ul li {
-  padding: .6em 1.5em ;
+  padding: 0.6em 1.5em;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .menuL {
+    display: none !important;
+  }
+  .searchBox {
+    /* background:red; */
+    /* width: 1em ; */
+    overflow: initial;
+  }
+  .searchBox i {
+    position: relative;
+    font-size: 21px;
+  }
+  .searchBox input {
+    display: none;
+  }
+  .searchBox input::placeholder {
+    display: none !important;
+    visibility: hidden;
+  }
+  .button1 {
+    display: none;
+  }
+  .intro {
+    white-space: nowrap;
+  }
+  .hero h1 {
+    font-size: 50px;
+  }
+  .hero {
+    padding: 1em;
+    width: 100%;
+  }
+  .wrapper {
+    mask-image: none;
+  }
+  .buttons button {
+    white-space: nowrap;
+  }
+  .cats ul {
+    overflow: scroll;
+  }
+  .cats ul li {
+    white-space: nowrap;
+  }
+}
+.cats::-webkit-scrollbar {
+  display: none;
 }

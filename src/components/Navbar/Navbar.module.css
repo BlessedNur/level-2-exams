@@ -91,7 +91,7 @@
 .intro {
   background-color: #ffd97c;
   width: fit-content;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 0.4em 0.7em;
   border-radius: 20px;
 }
@@ -171,7 +171,7 @@
   height: 180px;
   margin-top: 5rem;
   overflow: hidden;
-  
+
   mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),
@@ -205,7 +205,11 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
 .item1 {
   animation-delay: calc(30s / 8 * (8 - 1) * -1);
 }
@@ -236,4 +240,42 @@
 
 .item8 {
   animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+@media screen and (max-width: 768px) {
+  .menuL {
+    display: none !important;
+  }
+  .searchBox {
+    /* background:red; */
+    /* width: 1em ; */
+    overflow: initial;
+  }
+  .searchBox i {
+    position: relative;
+    font-size: 21px;
+  }
+  .searchBox input {
+    display: none;
+  }
+  .searchBox input::placeholder {
+    display: none !important;
+    visibility: hidden;
+  }
+  .button1 {
+    display: none;
+  }
+  .intro {
+    white-space: nowrap;
+  }
+  .hero h1 {
+    font-size: 50px;
+  }
+  .hero {
+    padding: 1em;
+    width: 100%;
+  }
+  .wrapper {
+    mask-image: none;
+  }
 }

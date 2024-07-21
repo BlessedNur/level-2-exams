@@ -5,7 +5,7 @@
   /* justify-content: space-between; */
   gap: 8em;
 }
-.rights{
+.rights {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -24,25 +24,27 @@
   height: 100%;
 }
 
-.logo{
+.logo {
   position: absolute;
   top: 8%;
+  cursor: pointer;
   left: 8%;
+  z-index: 10;
 }
-.logo svg path{
+.logo svg path {
   fill: white;
 }
-.email{
+.email {
   position: absolute;
   bottom: 8%;
   left: 8%;
   color: white;
 }
-.rights h1{
- font-size: 30px;
- font-weight: 600;
+.rights h1 {
+  font-size: 30px;
+  font-weight: 600;
 }
-.rights button{
+.rights button {
   display: flex;
   align-items: center;
   gap: 1em;
@@ -52,4 +54,47 @@
   border-radius: 30px;
   border: none;
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .lefts {
+    /* display: none; */
+  }
+  .rights {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    color: white;
+  }
+  .rights a {
+    color: royalblue;
+  }
+  .lefts {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .lefts::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.526);
+    filter: blur(10px);
+  }
+  .rights button {
+    white-space: nowrap;
+    width: 90%;
+    text-align: center;
+  }
+  .rights svg {
+    min-width: 1.5em !important;
+  }
+  .rights svg,
+  .rights button p {
+    transform: translateX(-1.5em);
+  }
 }

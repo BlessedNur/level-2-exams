@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import style from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,12 +7,42 @@ import { signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 function Page() {
+  const [menu, setMenu] = useState(false);
   const { data: session } = useSession();
   const navigate = useRouter();
   return (
     <section className={style.dash}>
       <nav className={style.nav}>
         <div className={style.left}>
+          <div
+            className="hamburger"
+            onClick={() => (menu ? setMenu(false) : setMenu(true))}
+          >
+            <input className="checkbox" type="checkbox" checked={menu} />
+            <svg fill="none" viewBox="0 0 50 50" height="40" width="50">
+              <path
+                className="lineTop line"
+                stroke-linecap="round"
+                stroke-width="4"
+                stroke="black"
+                d="M6 11L44 11"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-width="4"
+                stroke="black"
+                d="M6 24H43"
+                className="lineMid line"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-width="4"
+                stroke="black"
+                d="M6 37H43"
+                className="lineBottom line"
+              ></path>
+            </svg>
+          </div>
           <svg
             style={{
               cursor: "pointer",
@@ -33,7 +63,7 @@ function Page() {
               fill="currentColor"
             ></path>
           </svg>
-          <ul>
+          <ul className={style.menuL}>
             <li>
               <Link href={""}>
                 <p>Find designers</p>

@@ -48,6 +48,7 @@ function Page() {
         </div>
       )}
       <div className={style.lefts}>
+        
         <video
           autoPlay
           muted
@@ -76,6 +77,7 @@ function Page() {
         </div>
         <div className={style.email}>@glebich</div>
       </div>
+
       <div className={style.rights}>
         <h1>Sign in to Dribble</h1>
         {/* <form onSubmit={handleSubmit}> */}

@@ -142,22 +142,22 @@
   width: 100%;
   background: white !important;
 }
-.detaily{
+.detaily {
   padding: 1em;
 }
-.imageBox img{
+.imageBox img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
-.left{
+.left {
   /* overflow: hidden; */
 }
-.left p{
+.left p {
   white-space: nowrap;
 }
-.previewImage{
+.previewImage {
   width: 100%;
   display: flex;
   padding: 2em;
@@ -166,8 +166,50 @@
   /* background-color: red; */
   height: 80vh;
 }
-.previewImage img{
+.previewImage img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .menuL {
+    display: none !important;
+  }
+  .searchBox {
+    /* background:red; */
+    /* width: 1em ; */
+    overflow: initial;
+  }
+  .searchBox i {
+    position: relative;
+    font-size: 21px;
+  }
+  .searchBox input {
+    display: none;
+  }
+  .searchBox input::placeholder {
+    display: none !important;
+    visibility: hidden;
+  }
+  .button1 {
+    display: none;
+  }
+  .intro {
+    white-space: nowrap;
+  }
+  .hero h1 {
+    font-size: 50px;
+  }
+  .hero {
+    padding: 1em;
+    width: 100%;
+  }
+  .wrapper {
+    mask-image: none;
+  }
+  .previewImage {
+    flex-direction: column;
+    padding: 1em;
+  }
 }
